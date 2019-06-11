@@ -61,15 +61,10 @@ namespace sims_14
             double t2 = ex.exp(l);
             if (t1 > t2)
             {
-                min = t2;
-                max = t1;
+                min = Math.Min(t1,t2);
+                max = Math.Max(t1,t2);
             }
-            else
-            {
-                min = t1;
-                max = t2;
-            }
-
+          
             workTime = Math.Round((ex.uniform(min, max)), 1);
             if (workTime < 0.1)
                 workTime += 0.2;
